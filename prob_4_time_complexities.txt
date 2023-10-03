@@ -1,0 +1,57 @@
+
+(a)
+
+int count = 0;
+for (int i = n; i > 0; i /= 2) 
+{
+    for (int j = 0; j < n; j+=5) 
+   {
+        count += 1;
+    }
+}
+
+
+
+The time complexity of the given code is O(n * log(n)).
+because,The outer loop runs log(n) times because i is divided by 2 in each iteration until it becomes 0. This gives us a time complexity of O(log(n)).
+The inner loop runs (n / 5) times in each iteration of the outer loop. So, the total number of iterations of the inner loop is 4 * (n - 1) . This gives us a time complexity of O(n).
+Combining the complexities of the outer loop and the inner loop, we get O(n * log(n)).
+
+(b)
+for(int i =1; i*i<n; i++)
+{
+     cout << “hello”;
+}
+In this code, we have a for loop that runs while the condition i * i < n is true. The loop increments the value of i by 1 in each iteration.
+
+The condition i * i < n means that the loop will continue as long as i squared is less than n. Since we increment i by 1 in each iteration, this loop will execute until i reaches the square root of n.
+
+The time complexity of this loop can be determined by looking at how many iterations it performs. In each iteration, the code simply outputs "hello" to the console. The time complexity of the cout statement is constant (O(1)) because it takes a fixed amount of time regardless of the size of the input.
+
+Therefore, the time complexity of the given loop is O(sqrt(n)), which is the square root of the input n
+(c)
+
+for(int i =1; i<n; i=i*2)
+{
+   for(int j=1; j*j<n; j+=2)
+  {
+      cout << “hello”;
+   }
+}
+The outer loop runs log₂(n) times because i is doubled in each iteration until it becomes greater than or equal to n.
+
+The inner loop runs sqrt(n) times because j is incremented by 2 in each iteration until j * j becomes greater than or equal to n.
+
+Now, let's calculate the total number of iterations for both loops:
+
+The outer loop runs log₂(n) times.
+The inner loop runs sqrt(n) times for each iteration of the outer loop.
+Therefore, the total number of iterations for both loops is log₂(n) * sqrt(n).
+
+Since each iteration of the inner loop has a constant time complexity of O(1) due to the cout statement, the overall time complexity of the given code is O(log(n) * sqrt(n)).
+(d)
+int m = 1;
+for(int i=0; m<=n; i++)
+{
+    m+=i;
+}
